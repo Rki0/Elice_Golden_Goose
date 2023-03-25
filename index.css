@@ -74,7 +74,7 @@ body {
   background-color: var(--bg-color);
   padding: 10px 10px;
   width: 600px;
-  height: auto;
+  height: 400px;
   border-radius: 10px;
 }
 
@@ -94,7 +94,9 @@ body {
   flex-direction: column;
   color: var(--text-color);
   width: 350px;
+  height: 290px;
   margin: 20px 0;
+  overflow-y: scroll;
 }
 
 .frequent_button {
