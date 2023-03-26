@@ -23,7 +23,8 @@ textarea {
   font-size: 16px;
 }
 
-button {
+button,
+input {
   all: unset;
 }
 
@@ -92,11 +93,20 @@ body {
 .frequent_buttons {
   display: flex;
   flex-direction: column;
+  align-items: center;
   color: var(--text-color);
-  width: 350px;
+  width: 400px;
   height: 290px;
-  margin: 20px 0;
+  margin: 20px 0 0;
+}
+
+.frequent_default {
+  width: 100%;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .frequent_button {
@@ -106,6 +116,14 @@ body {
   padding: 10px 10px;
   display: flex;
   align-items: center;
+  width: 350px;
+}
+
+.frequent_text {
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .frequent_button:hover {
@@ -121,11 +139,70 @@ body {
 .button_box {
   border: 2px solid var(--highlight-color);
   border-radius: 5px;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   margin-right: 10px;
 }
 
+.frequent_button_tag {
+  margin-right: 5px;
+  width: 5%;
+}
+
+.frequent_delete_btn {
+  width: 5%;
+}
+
 .frequent_add_button {
+  margin: 0;
   font-weight: bold;
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+/* 작심 추가 시 form 부분 */
+.frequent_form {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid var(--text-color);
+  border-radius: 5px;
+  padding: 8px;
+  align-items: center;
+  width: 400px;
+}
+
+.frequent_input {
+  width: 70%;
+}
+
+.frequent_input::placeholder {
+  color: var(--active-bg-color);
+}
+
+.frequent_form_btn {
+  cursor: pointer;
+  border: 2px solid var(--text-color);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.frequent_form_btn:hover {
+  cursor: pointer;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+.frequent_form_btn:active {
+  background-color: var(--active-bg-color);
+}
+
+.hidden {
+  display: none;
 }

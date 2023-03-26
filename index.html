@@ -15,34 +15,40 @@
       </div>
 
       <div class="frequent_buttons">
-        <button class="frequent_button">
-          <div class="button_box"></div>
-          엘리스 강의듣기
-        </button>
+        <div class="frequent_default"></div>
 
-        <button class="frequent_button">
-          <div class="button_box"></div>
-          주간 테스트 보기
-        </button>
+        <div>
+          <button class="frequent_button frequent_add_button">+</button>
 
-        <button class="frequent_button">
-          <div class="button_box"></div>
-          헬스장 가기
-        </button>
+          <form class="frequent_form hidden">
+            <input
+              placeholder="작심을 입력해주세요(1 ~ 20자)"
+              type="text"
+              maxlength="20"
+              minlength="1"
+              class="frequent_input"
+              required
+            />
 
-        <button class="frequent_button">
-          <div class="button_box"></div>
-          스터디 카페 가기
-        </button>
-
-        <button class="frequent_button">
-          <div class="button_box"></div>
-          oveflow test
-        </button>
-
-        <button class="frequent_button frequent_add_button">+ 작심 추가</button>
+            <div>
+              <button
+                class="frequent_form_btn"
+                id="frequent_add_btn"
+                type="button"
+              >
+                추가
+              </button>
+              <button
+                class="frequent_form_btn frequent_cancel_btn"
+                type="reset"
+              >
+                취소
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
-    <script src="./index.js"></script>
+    <script type="module" src="./src/index.js"></script>
   </body>
 </html>
