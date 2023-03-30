@@ -49,7 +49,6 @@
 }
 
 .frequent_button {
-  border: 2px solid var(--border-color);
   border-radius: 5px;
   margin: 5px;
   padding: 10px;
@@ -104,6 +103,18 @@
   justify-content: center;
   align-items: center;
   font-size: 25px;
+}
+
+#frequent_detail_modal {
+  position: absolute;
+  z-index: 10;
+}
+
+.frequent_detail {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
 }
 
 /* 작심 추가 시 form 부분 */
