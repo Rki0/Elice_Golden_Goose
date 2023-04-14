@@ -19,7 +19,7 @@ export const renderFrequentJaksimList = async () => {
               <span>${data.jaksim}</span>
           </div>
           <div class="delete_frequent_btn">
-              <img src="../public/cross.png">
+              <img src="/public/cross.png">
           </div>
        </li>`
     )
@@ -48,14 +48,14 @@ export const renderJaksimTodayList = async () => {
              <div class="today_checkbox ${data.feature}">
                 ${
                   data.isDone
-                    ? '<img src="../../public/check.png" alt="check" />'
+                    ? '<img src="/public/check.png" alt="check" />'
                     : ""
                 }                
              </div>
              <span class="today_span">${data.jaksim}</span>
           </div>
           <div class="delete_today_btn">
-             <img src="../public/cross.png">
+             <img src="/public/cross.png">
           </div>
        </li>`
     );
