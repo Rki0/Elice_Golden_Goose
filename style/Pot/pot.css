@@ -1,0 +1,77 @@
+.pot_content {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.pot_content > img {
+  height: 250px;
+}
+
+.feature_processivity {
+  position: relative;
+  display: inline;
+  top: 0px;
+  right: 0px;
+  width: 25%;
+  font-size: 22px;
+  align-items: flex-start;
+}
+
+.feature_processivity_water {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 28px;
+}
+.feature_processivity_sun {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 28px;
+}
+.feature_processivity_pill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 28px;
+}
+
+.feature_processivity span {
+  text-align: end;
+  padding-bottom: 6px;
+}
+
+.pot_content {
+  position: relative;
+}
+
+.pot_content > img {
+  height: 300px;
+}
+
+.level_plant {
+  position: absolute;
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+  transition: all 1s;
+}
+
+.hide {
+  opacity: 0;
+  transition: 1s;
+}
+
+@keyframes complete {
+  from {
+    box-shadow: none;
+  }
+
+  to {
+    box-shadow: 0px 0px 20px 8px #5ae4fc;
+  }
+}

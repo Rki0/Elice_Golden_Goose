@@ -1,7 +1,7 @@
 // 작심 투데이 리스트를 DB에 GET하는 함수
 export const getJaksimTodayList = async () => {
   const response = await fetch(
-    "https://zaksim-haru-default-rtdb.firebaseio.com/jaksim_today.json"
+    "https://zaksim-haru-default-rtdb.firebaseio.com/today.json"
   );
 
   const data = await response.json();
@@ -12,7 +12,7 @@ export const getJaksimTodayList = async () => {
     jaksimTodayList.push({
       id: key,
       jaksim: data[key].jaksim,
-      fiture: data[key].fiture,
+      feature: data[key].feature,
       date: data[key].date,
       isDone: data[key].isDone,
     });
@@ -25,14 +25,11 @@ export const getJaksimTodayList = async () => {
 
 // 작심 투데이를 DB에 POST하는 함수, 인자로 DB에 넣을 data 객체가 필요함
 export const saveJaksimToday = async (data) => {
-  await fetch(
-    "https://zaksim-haru-default-rtdb.firebaseio.com/jaksim_today.json",
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    }
-  )
+  await fetch("https://zaksim-haru-default-rtdb.firebaseio.com/today.json", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  })
     .then((res) => res.json())
     .then((data) => {
       console.log("Success", data);
@@ -43,7 +40,7 @@ export const saveJaksimToday = async (data) => {
 // 작심 투데이를 DB에 PATCH하는 함수, id(key값), isDone(완료여부 : boolean) 2개의 인자가 필요
 export const updateJaksimToday = async (id, isDone) => {
   await fetch(
-    `https://zaksim-haru-default-rtdb.firebaseio.com/jaksim_today/${id}.json`,
+    `https://zaksim-haru-default-rtdb.firebaseio.com/today/${id}.json`,
     {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
@@ -60,7 +57,7 @@ export const updateJaksimToday = async (id, isDone) => {
 // 작심 투데이를 DB에서 DELETE 하는 함수, 인자로 DB에서 삭제할 id(key값)이 필요
 export const deleteJaksimToday = async (id) => {
   await fetch(
-    `https://zaksim-haru-default-rtdb.firebaseio.com/jaksim_today/${id}.json`,
+    `https://zaksim-haru-default-rtdb.firebaseio.com/today/${id}.json`,
     {
       method: "Delete",
     }
